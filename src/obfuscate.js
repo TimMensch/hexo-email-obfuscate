@@ -8,21 +8,20 @@ function emailReplace(match, altText) {
     if (altText.length>0) {
         altText += " ";
     }
-
+    match = " " + match;
     for (let b = 0; b < match.length; ++b) {
         newHtml += String.fromCharCode(match.charCodeAt(b) ^ 0xA);
     }
     newHtml = newHtml.replace(/'/g, "\\'");
     let v = `v${count}`;
     let s = `s${count++}`;
-    let result = `
-<script>
+    let result = `<script>
 var ${v},${s}='${newHtml}';
 for (${v}=0;${v}<${s}.length;++${v}) {
     document.write(String.fromCharCode(${s}.charCodeAt(${v})^0xA));
 }
 </script><noscript>${altText}[Email Protected]</noscript>`;
-    return result.trim();
+    return result;
 }
 const mailtoRegex = /<a href=['"]mailto:.+?['"]>(.+?)<\/a>/g;
 let count = 1;
