@@ -1,0 +1,27 @@
+{
+  "name": "hexo-email-obfuscate",
+  "version": "0.0.1",
+  "description": "A plugin that obfuscates email addresses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No tests'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TimMensch/hexo-email-obfuscate.git"
+  },
+  "keywords": [
+    "hexo",
+    "plugin",
+    "email",
+    "spider",
+    "obfuscate",
+    "anti-spam"
+  ],
+  "author": "Tim Mensch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimMensch/hexo-email-obfuscate/issues"
+  },
+  "homepage": "https://github.com/TimMensch/hexo-email-obfuscate"
+}
